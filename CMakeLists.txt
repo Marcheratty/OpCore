@@ -5,9 +5,13 @@ add_library(OpCore INTERFACE)
 # Set include directories so that headers are found for OpCore
 target_include_directories(OpCore INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
+# Add KalmanFusion as a STATIC library
+add_library(KalmanFusion STATIC src/Filters/KalmanFusion.cpp)
+target_include_directories(KalmanFusion PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 
 ##################################
-For testing
+# For testing
 ##################################
 
 # Add Google Test
