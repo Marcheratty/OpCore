@@ -1,4 +1,6 @@
-#include <Vector.h>
+#include <OpCore/Vector.h>
+
+namespace OpCore {
 
 template<typename T, std::size_t N>
 Vector<T, N>::Vector() {
@@ -115,3 +117,5 @@ bool Vector<T, N>::isnan() const {
     }
     return false;
 }
+
+} // end namespace OpCore

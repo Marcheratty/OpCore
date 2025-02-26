@@ -1,4 +1,7 @@
-#include <Matrix.h>
+#include <OpCore/Matrix.h>
+
+
+namespace OpCore {
 
 // Default constructor: initialize all elements to T{}.
 template<typename T, std::size_t Rows, std::size_t Cols>
@@ -241,3 +244,5 @@ Matrix<T, SubRows, SubCols> Matrix<T, Rows, Cols>::submatrix(std::size_t startRo
     }
     return result;
 }
+
+} // end namespace OpCore

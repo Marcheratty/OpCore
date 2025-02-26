@@ -9,6 +9,8 @@
 #include <cstddef>
 #include <cmath> 
 
+namespace OpCore {
+
 template<typename T, std::size_t N>
 class Vector {
 public:
@@ -58,6 +60,8 @@ public:
 
 
 };
+
+} // end namespace OpCore
 
 #include "Vector.tpp"
 #endif // VECTOR_H

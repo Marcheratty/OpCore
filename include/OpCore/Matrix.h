@@ -1,14 +1,17 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
+
 #include <array>
 #include <initializer_list>
 #include <cassert>
 #include <iostream>
 #include <algorithm>
 #include <cstddef>
-#include <Vector.h> 
+#include <OpCore/Vector.h> 
 #include <cmath> // For std::isnan
+
+namespace OpCore {
 
 template<typename T, std::size_t Rows, std::size_t Cols>
 class Matrix {
@@ -76,6 +79,8 @@ Matrix<T, Rows, OtherCols> operator*(const Matrix<T, Rows, Cols>& lhs,
 // Matrix-Vector multiplication: Matrix * Vector.
 template<typename T, std::size_t Rows, std::size_t Cols>
 Vector<T, Rows> operator*(const Matrix<T, Rows, Cols>& m, const Vector<T, Cols>& v);
+
+} // end namespace OpCore
 
 
 #include "Matrix.tpp"
